@@ -1,53 +1,116 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body */
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #b0b3e7;
 }
 
+/* Barra de Navegación */
 nav {
     background: linear-gradient(45deg, #1bce89, #001482);
-    padding: 20px;
-    position: absolute;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
     width: 100%;
-    bottom: 0;
+    z-index: 1000;
 }
 
-nav > ul {
+nav ul {
+    display: flex;
     list-style-type: none;
-    display:flex;
+    margin: 0;
+    padding: 0;
 }
 
-nav > ul > li > a {
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
     text-decoration: none;
-    color: #e80f0f;
-    padding: 10px;    
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: #333;
 }
 
+/* Main Styles */
 main {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 60px; 
+
+    
+    transition: margin-top 0.3s ease-in-out;
 }
 
-h1 {
-    
-    margin: 0
+/* Estilos para el título */
+header h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #000;
 }
 
-/* 600 px */
-@media (min-width: 600px) {
-    body {
-        background: linear-gradient(to bottom, #FF9A76, #333);
-    }
-    
+/* Secciones */
+section {
+    background-color: #d4a5a5;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 80%;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    color: #2a0e70;
+    margin-bottom: 10px;
+}
+
+section p {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+section a {
+    text-decoration: none;
+    color: white;
+    background-color: #3ac959;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
     nav {
-        top: 0;
+        top: 0; 
         bottom: auto;
+        justify-content: space-evenly;
+    }
+
+    nav ul li a {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    main {
+        margin-top: 120px;
+    }
+
+    section {
+        width: 90%; 
     }
 }
