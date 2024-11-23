@@ -39,7 +39,8 @@ nav a {
 }
 
 nav a:hover {
-    background: #555;
+    background-color: #1bce89; 
+    color: #001482;
 }
 
 /* Main */
@@ -83,7 +84,9 @@ section a {
 }
 
 section a:hover {
-    background: #159e68;
+    background-color: #2a0e70;
+    transform: scale(1.1);    
+    color: #fff;
 }
 
 /* Media Queries */
