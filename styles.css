@@ -9,12 +9,14 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #b0b3e7;
+    overflow-y: auto;
+    height: 100vh;
 }
 
 /* Barra de Navegación */
 nav {
     background: linear-gradient(45deg, #1bce89, #001482);
-    padding: 10px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -27,6 +29,8 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
+    padding: 0;
 }
 
 nav a {
@@ -59,19 +63,34 @@ section {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    width: 100%;
+    max-width: 500px;
+    width: 80%;
     text-align: center;
+    overflow-y: auto;
 }
 
 section h2 {
     color: #001482;
     margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+section img {
+    max-width: 100%; /* Asegura que la imagen se adapte al ancho */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
 }
 
 section p {
     color: #333;
     margin-bottom: 15px;
+    font-size: 1rem;
+    padding: 10px 20px;
 }
 
 section a {
@@ -81,12 +100,22 @@ section a {
     padding: 10px 20px;
     border-radius: 20px;
     transition: background 0.3s ease;
+    font-size: small;
 }
 
 section a:hover {
     background-color: #2a0e70;
     transform: scale(1.1);    
     color: #fff;
+}
+
+@media (min-width: 600px) {
+    div {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        justify-items: center;
+    }
 }
 
 /* Media Queries */
@@ -110,4 +139,25 @@ section a:hover {
         width: 100%;
         text-align: center;
     }
+
+    div {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 0px;
+        justify-items: center;
+    }
+
+    section {
+        padding: 15px;
+        width: 90%; /* Ajusta el ancho de las secciones en pantallas pequeñas */
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    section p {
+        font-size: 0.9rem;
+    }
+}
 }
