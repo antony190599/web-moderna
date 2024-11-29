@@ -56,6 +56,15 @@ main {
     margin-top: 100px;
     padding: 20px;
 }
+div {
+    padding-top: 60px; /* Ajusta el espaciado respecto al menú fijo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: auto; /* Permite scroll en el contenedor principal */
+    max-height: 100vh; /* Asegura que el contenido se ajuste al tamaño de la ventana */
+}
 
 /* Section */
 section {
